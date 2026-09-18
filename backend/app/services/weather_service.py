@@ -1,0 +1,2 @@
+def get_weather(farm_id: int) -> dict:
+    return {"demo": True, "farm_id": farm_id, "temperature": 31, "humidity": 72, "rainfall_probability": 65, "rainfall": "Expected tomorrow", "wind_kmh": 14, "forecast": [{"day": "Today", "temperature": 31, "condition": "Partly cloudy"}, {"day": "Sat", "temperature": 30, "condition": "Light rain"}, {"day": "Sun", "temperature": 29, "condition": "Cloudy"}, {"day": "Mon", "temperature": 32, "condition": "Sunny"}, {"day": "Tue", "temperature": 33, "condition": "Sunny"}], "agricultural_impact": "Rain may reduce the need for irrigation."}

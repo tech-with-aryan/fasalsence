@@ -1,0 +1,2 @@
+def analyze_disease(filename: str | None) -> dict:
+    return {"demo": True, "status": "analyzed", "possible_issue": "Wheat Leaf Rust", "confidence": 87, "risk": "Moderate", "filename": filename, "next_steps": ["Inspect nearby plants.", "Monitor whether symptoms spread.", "Follow locally verified agricultural guidance.", "Consult an agriculture expert for confirmation."], "notice": "AI-assisted screening only. This is not a laboratory diagnosis."}

@@ -1,0 +1,2 @@
+def answer_question(question: str, farm: dict | None = None) -> dict:
+    return {"demo": True, "question": question, "answer": "Rain is expected within the next 24–48 hours, and the current sample soil-moisture level is adequate. Based on these inputs, unnecessary irrigation may be avoided today. Please reassess after rainfall.", "based_on": ["field data", "weather data", "soil data"], "notice": "AI-generated demo guidance. Verify important decisions with a local agriculture expert."}
