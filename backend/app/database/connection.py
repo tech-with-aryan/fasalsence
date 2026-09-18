@@ -1,10 +1,12 @@
 import sqlite3
+import os
 from pathlib import Path
 from app.config import settings
 
 
 def get_connection() -> sqlite3.Connection:
-    connection = sqlite3.connect(Path(settings.database_path))
+    database_path = "/tmp/fasalsence.db" if os.getenv("VERCEL") else settings.database_path
+    connection = sqlite3.connect(Path(database_path))
     connection.row_factory = sqlite3.Row
     return connection
 
