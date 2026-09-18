@@ -17,6 +17,14 @@ export const api = {
   weather: (farmId = 1) => request(`/api/weather/${farmId}`),
   cropHealth: (farmId = 1) => request(`/api/crop-health/${farmId}`),
   advisory: (farmId = 1) => request(`/api/advisories/${farmId}`),
+  analyzeDisease: async (file) => {
+    const formData = new FormData()
+    formData.append('file', file)
+    const response = await fetch(`${API_URL}/api/disease/analyze`, { method: 'POST', body: formData })
+    const data = await response.json().catch(() => ({}))
+    if (!response.ok) throw new Error(data.detail || 'Photo analysis failed')
+    return data
+  },
 }
 
 export { API_URL }
